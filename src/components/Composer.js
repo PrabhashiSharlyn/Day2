@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+//for styling import the button here..
+import Button from '../components/shared/Button';
 
 class Composer extends Component {
 

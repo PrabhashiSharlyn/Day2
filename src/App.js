@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+
+
 import Header from "./components/Header";
 import Composer from './components/Composer';
 import Post from './components/Post';
@@ -33,7 +35,7 @@ class App extends Component {
   }*/
 
   renderPostItem = (post) => {
-    return <Post key={post._id} {...post} onDelete={this.onDelete}/> //rest means a variable get the rest to rest variable
+    return <Post key={post._id} {...post} onDelete={this.onDelete} /> //rest means a variable get the rest to rest variable
   }
 
   onSubmit = (text) => {
@@ -49,10 +51,10 @@ class App extends Component {
 
   }
 
-  onDelete = (_id) =>{
-    const {posts} =  this.state;
-    
-    const filteredPosts = posts.filter((post) =>{
+  onDelete = (_id) => {
+    const { posts } = this.state;
+
+    const filteredPosts = posts.filter((post) => {
       return post._id !== _id;
     });
 
